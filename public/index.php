@@ -64,9 +64,8 @@
         <section id="hero" class="section-hero">
             <div class="container hero-grid">
                 <div class="hero-copy">
-                    <span class="kicker">Hi 👋 ich bin</span>
                     <h1>Sag hallo zu <span class="hero-name">TaKo<span class="hero-period">.</span></span></h1>
-                    <p class="hero-tagline"><strong>Talk &amp; Knowledge.</strong> Ein Chatbot, der deine Inhalte tatsächlich kennt. Trainiert auf deinen Daten, antwortet rund um die Uhr.</p>
+                    <p class="hero-tagline"><strong>Talk &amp; Knowledge.</strong> Ein Chatbot, der deine Inhalte tatsächlich kennt wie ein langjähriger Mitarbeitender. Trainiert auf deinen Daten, antwortet es rund um die Uhr.</p>
                     <div class="hero-actions">
                         <a href="#demo" class="btn btn-primary">
                             <span>TaKo testen</span>
