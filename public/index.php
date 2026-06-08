@@ -324,7 +324,7 @@
                         <div class="price-amount">
                             <span class="price-currency">CHF</span>
                             <span class="price-number">2'900</span>
-                            <span class="price-period">/ Jahr</span>
+                            <span class="price-period">/ einmalige Set-Up Kosten</span>
                         </div>
                         <dl class="price-running">
                             <div><dt>Wartung</dt><dd>CHF 175 / Jahr</dd></div>
@@ -348,7 +348,7 @@
                         <div class="price-amount">
                             <span class="price-currency">CHF</span>
                             <span class="price-number">5'900</span>
-                            <span class="price-period">/ Jahr</span>
+                            <span class="price-period">/ einmalige Set-Up Kosten</span>
                         </div>
                         <dl class="price-running">
                             <div><dt>Wartung</dt><dd>CHF 510 / Jahr</dd></div>
@@ -372,7 +372,7 @@
                         <div class="price-amount">
                             <span class="price-currency">CHF</span>
                             <span class="price-number">11'900</span>
-                            <span class="price-period">/ Jahr</span>
+                            <span class="price-period">/ einmalige Set-Up Kosten</span>
                         </div>
                         <dl class="price-running">
                             <div><dt>Wartung</dt><dd>CHF 1'000 / Jahr</dd></div>
