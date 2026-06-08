@@ -118,7 +118,7 @@
                     <header class="meet-head">
                         <span class="kicker">Warum TaKo</span>
                         <h2>Nicht suchen sondern fragen.<br>Eine Antwort.</h2>
-                        <p>Deine Besucher wollen heute nicht mehr suchen – sie wollen fragen. Ich bin die Antwort.</p>
+                        <p>Deine Besucher und Mitarbeitende wollen heute nicht mehr suchen – sie wollen fragen. Ich kenne und gebe die Antwort.</p>
                     </header>
 
                     <ol class="problem-list">
@@ -130,7 +130,7 @@
                         <li class="problem">
                             <span class="problem-num">02</span>
                             <h3>Niemand klickt sich mehr durch Menüs.</h3>
-                            <p>Klassische Navigation funktioniert nicht mehr. Dein Publikum will direkt fragen – und ich beantworte das in ganzen Sätzen, nicht mit Link-Listen.</p>
+                            <p>Klassische Navigation funktioniert nicht mehr. Dein Publikum will direkt fragen, und ich beantworte das in ganzen Sätzen, nicht mit Link-Listen.</p>
                         </li>
                         <li class="problem">
                             <span class="problem-num">03</span>
@@ -172,13 +172,13 @@
                     <article class="usecase">
                         <span class="usecase-tag">Know-How</span>
                         <h3>Internes Wissen sichern.</h3>
-                        <p>Hinter Login: Mitarbeitende fragen mich, was im Handbuch, im Intranet oder im Confluence steht. Ohne Suchen.</p>
+                        <p>Mit Login: Mitarbeitende fragen mich, was im Handbuch, im Intranet oder im Confluence steht. Ohne Suchen.</p>
                     </article>
 
                     <article class="usecase">
                         <span class="usecase-tag">Suche</span>
                         <h3>Intelligente Suche über alles.</h3>
-                        <p>Ich indexiere CMS, CRM, REST-APIs und PDFs – und antworte semantisch, nicht nur per Keyword-Match.</p>
+                        <p>Ich indexiere CMS, CRM, REST-APIs und PDFs, und antworte semantisch, nicht nur per Keyword-Match.</p>
                     </article>
                 </div>
             </div>
@@ -398,7 +398,7 @@
                 <header class="contact-head">
                     <span class="kicker">Sag hallo</span>
                     <h2>Lass uns reden.</h2>
-                    <p>Wir helfen dir, mit einem Chatbot deine Ziele zu erreichen – und entscheiden gemeinsam, welche Grösse zu dir passt.</p>
+                    <p>Wir helfen dir, mit einem Chatbot deine Ziele zu erreichen, und entscheiden gemeinsam, was zu dir passt.</p>
                     <ul class="contact-meta">
                         <li><strong>Sitz</strong> Seestrasse 49, 8702&nbsp;Zollikon</li>
                         <li><strong>Telefon</strong> +41 43 488 86 00</li>
@@ -438,7 +438,7 @@
                 <a href="https://compresso.ch/impressum/" target="_blank" rel="noopener">Impressum</a>
                 <a href="https://compresso.ch/datenschutzerklaerung/" target="_blank" rel="noopener">Datenschutz</a>
             </nav>
-            <small class="footer-mono">© 2026 · Made in CH</small>
+            <small class="footer-mono">© 2026 · Made in Switzerland</small>
         </div>
     </footer>
 
