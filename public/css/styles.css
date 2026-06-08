@@ -386,6 +386,9 @@ h3 {
 .mascot-art .tako-svg { width: 100%; height: auto; }
 
 .mascot-bubble {
+    display: block;
+    text-decoration: none;
+    cursor: pointer;
     margin-top: -1.75rem;
     margin-right: -1rem;
     margin-left: 5rem;
@@ -399,6 +402,12 @@ h3 {
     z-index: 3;
     box-shadow: var(--shadow-card);
     max-width: 360px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.mascot-bubble:hover,
+.mascot-bubble:focus-visible {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-card), 0 0 0 3px rgba(7, 93, 169, 0.25);
 }
 .mascot-bubble::before {
     content: '';
@@ -520,8 +529,8 @@ h3 {
 
 .usecase-grid {
     display: grid;
-    grid-template-columns: 1.4fr 1fr 1fr;
-    grid-template-rows: auto auto;
+    grid-template-columns: repeat(4, 1fr);
+    align-items: stretch;
     gap: 1.25rem;
 }
 .usecase {
@@ -533,7 +542,6 @@ h3 {
 }
 .usecase:hover { transform: translateY(-3px); box-shadow: var(--shadow-card); }
 .usecase-large {
-    grid-row: span 2;
     background: var(--tako-blue);
     color: var(--tako-cream);
     border-color: var(--tako-blue);
@@ -1260,7 +1268,7 @@ input:focus-visible,
     .meet-grid { grid-template-columns: 1fr; gap: 2.5rem; }
     .meet-head { position: static; }
     .usecase-grid { grid-template-columns: 1fr 1fr; }
-    .usecase-large { grid-row: span 1; grid-column: span 2; }
+    .usecase-large { grid-row: span 1; grid-column: span 1; }
     .how-flow { grid-template-columns: 1fr; gap: 0.75rem; }
     .how-connector { transform: rotate(90deg); }
     .contact-grid { grid-template-columns: 1fr; gap: 2.5rem; }

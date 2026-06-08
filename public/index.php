@@ -64,9 +64,8 @@
         <section id="hero" class="section-hero">
             <div class="container hero-grid">
                 <div class="hero-copy">
-                    <span class="kicker">Hi 👋 ich bin</span>
                     <h1>Sag hallo zu <span class="hero-name">TaKo<span class="hero-period">.</span></span></h1>
-                    <p class="hero-tagline"><strong>Talk &amp; Knowledge.</strong> Ein Chatbot, der deine Inhalte tatsächlich kennt. Trainiert auf deinen Daten, antwortet rund um die Uhr.</p>
+                    <p class="hero-tagline"><strong>Talk &amp; Knowledge.</strong> Ein Chatbot, der deine Inhalte tatsächlich kennt wie ein langjähriger Mitarbeitender. Trainiert auf deinen Daten, antwortet es rund um die Uhr.</p>
                     <div class="hero-actions">
                         <a href="#demo" class="btn btn-primary">
                             <span>TaKo testen</span>
@@ -88,9 +87,9 @@
                             <?php include __DIR__ . '/partials/tako.svg.php'; ?>
                         </div>
                     </div>
-                    <div class="mascot-bubble">
-                        „Hi! Frag mich was — ich bin auf der Demo unten bereit."
-                    </div>
+                    <a href="#demo" class="mascot-bubble">
+                        „Hi! Frag mich was — probier mich gleich hier in der Demo aus."
+                    </a>
                 </aside>
             </div>
 
@@ -118,8 +117,8 @@
                 <div class="meet-grid">
                     <header class="meet-head">
                         <span class="kicker">Warum TaKo</span>
-                        <h2>Drei Probleme.<br>Eine Antwort.</h2>
-                        <p>Deine Besucher wollen heute nicht mehr suchen – sie wollen fragen. Ich bin die Antwort.</p>
+                        <h2>Nicht suchen sondern fragen.<br>Eine Antwort.</h2>
+                        <p>Deine Besucher und Mitarbeitende wollen heute nicht mehr suchen – sie wollen fragen. Ich kenne und gebe die Antwort.</p>
                     </header>
 
                     <ol class="problem-list">
@@ -131,7 +130,7 @@
                         <li class="problem">
                             <span class="problem-num">02</span>
                             <h3>Niemand klickt sich mehr durch Menüs.</h3>
-                            <p>Klassische Navigation funktioniert nicht mehr. Dein Publikum will direkt fragen – und ich beantworte das in ganzen Sätzen, nicht mit Link-Listen.</p>
+                            <p>Klassische Navigation funktioniert nicht mehr. Dein Publikum will direkt fragen, und ich beantworte das in ganzen Sätzen, nicht mit Link-Listen.</p>
                         </li>
                         <li class="problem">
                             <span class="problem-num">03</span>
@@ -148,7 +147,7 @@
             <div class="container">
                 <header class="section-head section-head-light">
                     <span class="kicker kicker-light">Wo ich helfe</span>
-                    <h2>Vier Einsätze, eine Engine.</h2>
+                    <h2>Viele Einsätze, eine Engine.</h2>
                     <p>Egal ob Endkund:in, Lieferant:in oder Team-intern – ich passe mich an. Hier vier typische Einsatzgebiete:</p>
                 </header>
 
@@ -173,13 +172,13 @@
                     <article class="usecase">
                         <span class="usecase-tag">Know-How</span>
                         <h3>Internes Wissen sichern.</h3>
-                        <p>Hinter Login: Mitarbeitende fragen mich, was im Handbuch, im Intranet oder im Confluence steht. Ohne Suchen.</p>
+                        <p>Mit Login: Mitarbeitende fragen mich, was im Handbuch, im Intranet oder im Confluence steht. Ohne Suchen.</p>
                     </article>
 
                     <article class="usecase">
                         <span class="usecase-tag">Suche</span>
                         <h3>Intelligente Suche über alles.</h3>
-                        <p>Ich indexiere CMS, CRM, REST-APIs und PDFs – und antworte semantisch, nicht nur per Keyword-Match.</p>
+                        <p>Ich indexiere CMS, CRM, REST-APIs und PDFs, und antworte semantisch, nicht nur per Keyword-Match.</p>
                     </article>
                 </div>
             </div>
@@ -311,7 +310,7 @@
             <div class="container">
                 <header class="section-head section-head-light">
                     <span class="kicker kicker-light">Pakete</span>
-                    <h2>Drei Grössen.<br>Eine passt zu dir.</h2>
+                    <h2>Verschiedene Pakete.<br>Eins passt zu dir.</h2>
                     <p>Alle Preise pro Jahr. Wartung und Token-Kosten transparent ausgewiesen.</p>
                 </header>
 
@@ -325,7 +324,7 @@
                         <div class="price-amount">
                             <span class="price-currency">CHF</span>
                             <span class="price-number">2'900</span>
-                            <span class="price-period">/ Jahr</span>
+                            <span class="price-period">/ einmalige Set-Up Kosten</span>
                         </div>
                         <dl class="price-running">
                             <div><dt>Wartung</dt><dd>CHF 175 / Jahr</dd></div>
@@ -349,7 +348,7 @@
                         <div class="price-amount">
                             <span class="price-currency">CHF</span>
                             <span class="price-number">5'900</span>
-                            <span class="price-period">/ Jahr</span>
+                            <span class="price-period">/ einmalige Set-Up Kosten</span>
                         </div>
                         <dl class="price-running">
                             <div><dt>Wartung</dt><dd>CHF 510 / Jahr</dd></div>
@@ -373,7 +372,7 @@
                         <div class="price-amount">
                             <span class="price-currency">CHF</span>
                             <span class="price-number">11'900</span>
-                            <span class="price-period">/ Jahr</span>
+                            <span class="price-period">/ einmalige Set-Up Kosten</span>
                         </div>
                         <dl class="price-running">
                             <div><dt>Wartung</dt><dd>CHF 1'000 / Jahr</dd></div>
@@ -399,7 +398,7 @@
                 <header class="contact-head">
                     <span class="kicker">Sag hallo</span>
                     <h2>Lass uns reden.</h2>
-                    <p>Wir helfen dir, mit einem Chatbot deine Ziele zu erreichen – und entscheiden gemeinsam, welche Grösse zu dir passt.</p>
+                    <p>Wir helfen dir, mit einem Chatbot deine Ziele zu erreichen, und entscheiden gemeinsam, was zu dir passt.</p>
                     <ul class="contact-meta">
                         <li><strong>Sitz</strong> Seestrasse 49, 8702&nbsp;Zollikon</li>
                         <li><strong>Telefon</strong> +41 43 488 86 00</li>
@@ -439,7 +438,7 @@
                 <a href="https://compresso.ch/impressum/" target="_blank" rel="noopener">Impressum</a>
                 <a href="https://compresso.ch/datenschutzerklaerung/" target="_blank" rel="noopener">Datenschutz</a>
             </nav>
-            <small class="footer-mono">© 2026 · Made in CH</small>
+            <small class="footer-mono">© 2026 · Made in Switzerland</small>
         </div>
     </footer>
 
