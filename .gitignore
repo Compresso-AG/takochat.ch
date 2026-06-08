@@ -1,0 +1,27 @@
+# Environment / secrets
+.env
+.npmrc
+
+# Chat logs (runtime data, stored outside the public docroot)
+data/
+
+# Dependencies
+node_modules/
+vendor/
+
+# DDEV generated files
+.ddev/.dbimage.txt
+.ddev/.ddev-docker-compose-full.yaml
+.ddev/.ddev-docker-compose-base.yaml
+.ddev/.ssh-auth-compose-full.yaml
+.ddev/.ssh-auth-compose-base.yaml
+.ddev/db_snapshots
+.ddev/import-db
+.ddev/postgres_snapshots
+.ddev/traefik/config/dynamic_config.yaml
+.ddev/traefik/certs
+
+# OS / editor
+.DS_Store
+.idea/
+.vscode/
