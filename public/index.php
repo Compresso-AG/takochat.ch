@@ -118,7 +118,7 @@
                 <div class="meet-grid">
                     <header class="meet-head">
                         <span class="kicker">Warum TaKo</span>
-                        <h2>Drei Probleme.<br>Eine Antwort.</h2>
+                        <h2>Nicht suchen sondern fragen.<br>Eine Antwort.</h2>
                         <p>Deine Besucher wollen heute nicht mehr suchen – sie wollen fragen. Ich bin die Antwort.</p>
                     </header>
 
@@ -148,7 +148,7 @@
             <div class="container">
                 <header class="section-head section-head-light">
                     <span class="kicker kicker-light">Wo ich helfe</span>
-                    <h2>Vier Einsätze, eine Engine.</h2>
+                    <h2>Viele Einsätze, eine Engine.</h2>
                     <p>Egal ob Endkund:in, Lieferant:in oder Team-intern – ich passe mich an. Hier vier typische Einsatzgebiete:</p>
                 </header>
 
@@ -311,7 +311,7 @@
             <div class="container">
                 <header class="section-head section-head-light">
                     <span class="kicker kicker-light">Pakete</span>
-                    <h2>Drei Grössen.<br>Eine passt zu dir.</h2>
+                    <h2>Verschiedene Pakete.<br>Eins passt zu dir.</h2>
                     <p>Alle Preise pro Jahr. Wartung und Token-Kosten transparent ausgewiesen.</p>
                 </header>
 
