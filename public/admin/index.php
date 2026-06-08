@@ -1,8 +1,26 @@
 <?php
 session_start();
 
-// --- Simple Password Protection ---
-$password = 'DBMh2Tu1U';
+// --- Load admin password from .env (repo root, outside the public docroot) ---
+$password = '';
+$envCandidates = [
+    dirname(__DIR__, 2) . '/.env', // repo root (docroot = public/)
+    dirname(__DIR__) . '/.env',    // docroot root
+    dirname(__DIR__, 3) . '/.env', // shared parent (mono-repo / staging style)
+];
+foreach ($envCandidates as $candidate) {
+    if (file_exists($candidate)) {
+        foreach (file($candidate, FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES) as $line) {
+            if (str_starts_with(trim($line), '#')) continue;
+            if (str_contains($line, '=')) {
+                [$key, $value] = explode('=', $line, 2);
+                $_ENV[trim($key)] = trim($value);
+            }
+        }
+        break;
+    }
+}
+$password = $_ENV['ADMIN_PASSWORD'] ?? '';
 
 if (isset($_POST['logout'])) {
     unset($_SESSION['admin_auth']);
@@ -11,7 +29,8 @@ if (isset($_POST['logout'])) {
 }
 
 if (isset($_POST['password'])) {
-    if ($_POST['password'] === $password) {
+    // Constant-time compare; an unset/empty ADMIN_PASSWORD never grants access.
+    if ($password !== '' && hash_equals($password, (string) $_POST['password'])) {
         $_SESSION['admin_auth'] = true;
     } else {
         $loginError = true;

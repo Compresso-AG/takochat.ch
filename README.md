@@ -42,13 +42,15 @@ ddev launch                 # öffnet https://takochat.ddev.site
 | Variable         | Beschreibung                                  |
 |------------------|-----------------------------------------------|
 | `OPENAI_API_KEY` | API Key für die Chat-Demo (`public/api/chat.php`) |
+| `ADMIN_PASSWORD` | Passwort für das Admin-Panel (`public/admin/index.php`) |
 
-Die `.env` wird automatisch aus dem Repo-Root geladen (siehe `public/api/chat.php`).
+Die `.env` wird automatisch aus dem Repo-Root geladen (siehe `public/api/chat.php`
+und `public/admin/index.php`).
 
 ## Admin-Panel
 
-Erreichbar unter `/admin/`. Das Passwort ist aktuell in `public/admin/index.php`
-hinterlegt und sollte vor dem Produktiv-Einsatz angepasst werden.
+Erreichbar unter `/admin/`. Das Passwort wird aus `ADMIN_PASSWORD` in der `.env`
+gelesen. Ohne gesetztes Passwort ist **kein** Login möglich.
 
 ## Tech Stack
 
