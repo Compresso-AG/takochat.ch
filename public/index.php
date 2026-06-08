@@ -3,6 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-JX20D89WB7"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-JX20D89WB7');
+    </script>
+
     <title>TaKo – Der Chatbot, der deine Inhalte kennt | Compresso</title>
     <meta name="description" content="Hi, ich bin TaKo. Talk & Knowledge – ein massgeschneiderter KI-Chatbot, trainiert auf deinen Inhalten. Sofort, präzise und rund um die Uhr.">
 

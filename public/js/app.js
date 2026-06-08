@@ -10,6 +10,14 @@ document.addEventListener('DOMContentLoaded', () => {
     // Conversation history for context
     let conversationHistory = [];
     let isWaiting = false;
+    let chatStarted = false;
+
+    // --- Analytics helper (Google Analytics / gtag) ---
+    const track = (name, params = {}) => {
+        if (typeof window.gtag === 'function') {
+            window.gtag('event', name, params);
+        }
+    };
 
     const scrollToBottom = () => {
         if (chatHistory) chatHistory.scrollTop = chatHistory.scrollHeight;
@@ -46,7 +54,7 @@ document.addEventListener('DOMContentLoaded', () => {
         exampleBtns.forEach(btn => btn.disabled = !enabled);
     };
 
-    const handleSend = async (text) => {
+    const handleSend = async (text, source = 'input') => {
         if (isWaiting) return;
 
         // Use provided text or input value
@@ -55,6 +63,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // Enforce max length
         const truncated = message.substring(0, MAX_INPUT_LENGTH);
+
+        // Track first interaction of the session, then each sent message
+        if (!chatStarted) {
+            chatStarted = true;
+            track('chat_start', { source });
+        }
+        track('chat_message_sent', { source, message_length: truncated.length });
 
         // Show user message
         chatHistory.appendChild(createBubble(truncated, 'user'));
@@ -85,8 +100,15 @@ document.addEventListener('DOMContentLoaded', () => {
 
             if (data.error) {
                 chatHistory.appendChild(createBubble(data.error, 'bot'));
+
+                // Classify the error for analytics
+                let errorType = 'other';
+                if (response.status === 429 || /limit/i.test(data.error)) errorType = 'rate_limit';
+                else if (response.status >= 500) errorType = 'server';
+                track('chat_error', { error_type: errorType, status: response.status });
             } else {
                 chatHistory.appendChild(createBubble(data.reply, 'bot'));
+                track('chat_response_received', { reply_length: (data.reply || '').length });
 
                 // Store in conversation history
                 conversationHistory.push(
@@ -103,6 +125,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const indicator = document.getElementById('typing-indicator');
             if (indicator) indicator.remove();
             chatHistory.appendChild(createBubble('Verbindungsfehler. Bitte versuche es erneut.', 'bot'));
+            track('chat_error', { error_type: 'network' });
         }
 
         isWaiting = false;
@@ -138,7 +161,7 @@ document.addEventListener('DOMContentLoaded', () => {
     exampleBtns.forEach(btn => {
         btn.addEventListener('click', () => {
             const question = btn.dataset.question;
-            if (question) handleSend(question);
+            if (question) handleSend(question, 'example');
         });
     });
 
@@ -165,4 +188,55 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         });
     }
+
+    // --- Link & CTA Tracking (event delegation) ---
+    // Erfasst Kontakt-Mails, Preis-Anfragen, CTAs, Navigation und externe Links.
+    const sectionOf = (el) => {
+        const section = el.closest('section[id]');
+        return section ? section.id : 'header';
+    };
+
+    document.addEventListener('click', (e) => {
+        const link = e.target.closest('a');
+        if (!link) return;
+
+        const href = link.getAttribute('href') || '';
+        const label = (link.textContent || '').trim().replace(/\s+/g, ' ').slice(0, 60);
+        const location = sectionOf(link);
+
+        // 1) E-Mail-Links (Kontakt & Preis-Anfragen)
+        if (href.startsWith('mailto:')) {
+            const recipient = href.slice(7).split('?')[0];
+            const subjectMatch = href.match(/[?&]subject=([^&]*)/);
+            const subject = subjectMatch ? decodeURIComponent(subjectMatch[1]) : '';
+
+            const plan = ['Small', 'Medium', 'Large'].find(p => subject.includes(p));
+            if (plan) {
+                // Preis-Paket angefragt -> Lead
+                track('pricing_request', { plan, recipient, location });
+                track('generate_lead', { plan, recipient });
+            } else {
+                track('contact_click', { method: 'email', recipient, location, label });
+            }
+            return;
+        }
+
+        // 2) Telefon-Links
+        if (href.startsWith('tel:')) {
+            track('contact_click', { method: 'phone', recipient: href.slice(4), location, label });
+            return;
+        }
+
+        // 3) Interne Sprung-Links (#...) -> Navigation bzw. CTA
+        if (href.startsWith('#') && href.length > 1) {
+            const inNav = !!link.closest('#main-nav');
+            track(inNav ? 'navigation_click' : 'cta_click', { target: href, label, location });
+            return;
+        }
+
+        // 4) Externe Links (Impressum, Datenschutz, compresso.ch etc.)
+        if (/^https?:\/\//i.test(href) && !href.includes(window.location.host)) {
+            track('outbound_click', { url: href, label, location });
+        }
+    });
 });
