@@ -16,14 +16,24 @@
 
     <title>TaKo – Der Chatbot, der deine Inhalte kennt | Compresso</title>
     <meta name="description" content="Hi, ich bin TaKo. Talk & Knowledge – ein massgeschneiderter KI-Chatbot, trainiert auf deinen Inhalten. Sofort, präzise und rund um die Uhr.">
+    <link rel="canonical" href="https://takochat.ch/">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#075da9">
 
     <meta property="og:type" content="website">
+    <meta property="og:site_name" content="TaKo – Compresso AG">
+    <meta property="og:locale" content="de_CH">
+    <meta property="og:url" content="https://takochat.ch/">
     <meta property="og:title" content="TaKo – Der Chatbot, der deine Inhalte kennt">
     <meta property="og:description" content="Hi, ich bin TaKo. Talk & Knowledge – ein massgeschneiderter KI-Chatbot, trainiert auf deinen Inhalten.">
-    <meta property="og:image" content="assets/tako-full.svg">
+    <meta property="og:image" content="https://takochat.ch/assets/og-image.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="TaKo – Talk & Knowledge, der KI-Chatbot der Compresso AG">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="TaKo – Der Chatbot, der deine Inhalte kennt">
     <meta name="twitter:description" content="Hi, ich bin TaKo. Talk & Knowledge – ein massgeschneiderter KI-Chatbot.">
+    <meta name="twitter:image" content="https://takochat.ch/assets/og-image.png">
 
     <link rel="icon" type="image/svg+xml" href="assets/tako.svg">
     <link rel="alternate icon" type="image/png" href="assets/favicon.png">
@@ -31,6 +41,72 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,600;12..96,700;12..96,800&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css?v=<?= filemtime(__DIR__ . '/css/styles.css') ?>">
+
+    <!-- Structured data (Schema.org / JSON-LD) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Organization",
+          "@id": "https://takochat.ch/#compresso",
+          "name": "Compresso AG",
+          "url": "https://compresso.ch",
+          "logo": "https://takochat.ch/assets/logo.png",
+          "email": "info@compresso.ch",
+          "telephone": "+41 43 488 86 00",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Seestrasse 49",
+            "postalCode": "8702",
+            "addressLocality": "Zollikon",
+            "addressCountry": "CH"
+          }
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://takochat.ch/#website",
+          "url": "https://takochat.ch/",
+          "name": "TaKo – Talk & Knowledge",
+          "inLanguage": "de-CH",
+          "publisher": { "@id": "https://takochat.ch/#compresso" }
+        },
+        {
+          "@type": "Product",
+          "name": "TaKo – Talk & Knowledge",
+          "description": "Massgeschneiderter KI-Chatbot, trainiert auf deinen Inhalten. Beantwortet Fragen rund um die Uhr – auf Website, Intranet oder im Messenger.",
+          "brand": { "@id": "https://takochat.ch/#compresso" },
+          "url": "https://takochat.ch/",
+          "offers": [
+            {
+              "@type": "Offer",
+              "name": "Small",
+              "price": "2900",
+              "priceCurrency": "CHF",
+              "description": "Einmalige Set-up-Kosten. Für einen klaren Use-Case, eine Quelle, ein Look.",
+              "url": "https://takochat.ch/#pricing"
+            },
+            {
+              "@type": "Offer",
+              "name": "Medium",
+              "price": "5900",
+              "priceCurrency": "CHF",
+              "description": "Einmalige Set-up-Kosten. Mehrere Quellen, dein Branding, Prio-Support.",
+              "url": "https://takochat.ch/#pricing"
+            },
+            {
+              "@type": "Offer",
+              "name": "Large",
+              "price": "11900",
+              "priceCurrency": "CHF",
+              "description": "Einmalige Set-up-Kosten. Tiefe Integration, mehrere Sprachen, SLA.",
+              "url": "https://takochat.ch/#pricing"
+            }
+          ]
+        }
+      ]
+    }
+    </script>
 </head>
 <body>
 
