@@ -59,7 +59,7 @@ if (empty($_SESSION['admin_auth'])) {
     </head>
     <body>
         <div class="login">
-            <h1>Tako Admin</h1>
+            <h1>TaKo Admin</h1>
             <?php if (!empty($loginError)): ?>
                 <p class="error">Falsches Passwort</p>
             <?php endif; ?>
@@ -110,7 +110,7 @@ $selectedIdx = isset($_GET['chat']) ? (int)$_GET['chat'] : -1;
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tako Admin</title>
+    <title>TaKo Admin</title>
     <link rel="icon" type="image/png" href="../assets/favicon.png">
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -165,7 +165,7 @@ $selectedIdx = isset($_GET['chat']) ? (int)$_GET['chat'] : -1;
 </head>
 <body>
     <div class="admin-header">
-        <h1>Tako Admin</h1>
+        <h1>TaKo Admin</h1>
         <form method="POST"><button type="submit" name="logout" value="1">Logout</button></form>
     </div>
 
@@ -227,7 +227,7 @@ $selectedIdx = isset($_GET['chat']) ? (int)$_GET['chat'] : -1;
 
                 <?php foreach ($chat['messages'] ?? [] as $msg): ?>
                     <div class="message">
-                        <div class="role <?= $msg['role'] ?>"><?= $msg['role'] === 'user' ? 'Besucher' : 'Tako' ?></div>
+                        <div class="role <?= $msg['role'] ?>"><?= $msg['role'] === 'user' ? 'Besucher' : 'TaKo' ?></div>
                         <div class="text"><?= nl2br(htmlspecialchars($msg['content'])) ?></div>
                         <div class="msg-time"><?= isset($msg['time']) ? date('H:i:s', strtotime($msg['time'])) : '' ?></div>
                     </div>
