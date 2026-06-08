@@ -88,9 +88,9 @@
                             <?php include __DIR__ . '/partials/tako.svg.php'; ?>
                         </div>
                     </div>
-                    <div class="mascot-bubble">
-                        „Hi! Frag mich was — ich bin auf der Demo unten bereit."
-                    </div>
+                    <a href="#demo" class="mascot-bubble">
+                        „Hi! Frag mich was — probier mich gleich hier in der Demo aus."
+                    </a>
                 </aside>
             </div>
 

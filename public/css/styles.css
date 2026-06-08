@@ -386,6 +386,9 @@ h3 {
 .mascot-art .tako-svg { width: 100%; height: auto; }
 
 .mascot-bubble {
+    display: block;
+    text-decoration: none;
+    cursor: pointer;
     margin-top: -1.75rem;
     margin-right: -1rem;
     margin-left: 5rem;
@@ -399,6 +402,12 @@ h3 {
     z-index: 3;
     box-shadow: var(--shadow-card);
     max-width: 360px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.mascot-bubble:hover,
+.mascot-bubble:focus-visible {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-card), 0 0 0 3px rgba(7, 93, 169, 0.25);
 }
 .mascot-bubble::before {
     content: '';
