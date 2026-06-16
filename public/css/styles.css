@@ -1019,6 +1019,7 @@ h3 {
 .price-amount {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
     align-items: baseline;
     gap: 0.1rem 0.4rem;
     padding-bottom: 1.25rem;
@@ -1043,6 +1044,7 @@ h3 {
 .price-period {
     flex-basis: 100%;
     margin-top: 0.35rem;
+    text-align: center;
     font-family: var(--font-mono);
     font-size: 0.85rem;
     color: var(--tako-ink-soft);
