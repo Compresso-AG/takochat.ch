@@ -140,7 +140,7 @@
         <section id="hero" class="section-hero">
             <div class="container hero-grid">
                 <div class="hero-copy">
-                    <h1>Sag hallo zu <span class="hero-name">TaKo<span class="hero-period">.</span></span></h1>
+                    <h1>Sag hallo zu <span class="hero-name">TaKo</span></h1>
                     <p class="hero-tagline"><strong>Talk &amp; Knowledge.</strong> Ein Chatbot, der deine Inhalte tatsächlich kennt wie ein langjähriger Mitarbeitender. Trainiert auf deinen Daten, antwortet es rund um die Uhr.</p>
                     <div class="hero-actions">
                         <a href="#demo" class="btn btn-primary">
